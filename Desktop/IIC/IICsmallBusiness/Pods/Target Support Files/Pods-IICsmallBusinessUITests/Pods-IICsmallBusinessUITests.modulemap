@@ -1,0 +1,6 @@
+framework module Pods_IICsmallBusinessUITests {
+  umbrella header "Pods-IICsmallBusinessUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
