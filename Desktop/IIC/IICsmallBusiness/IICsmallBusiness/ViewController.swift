@@ -9,9 +9,27 @@
 import UIKit
 import LocalAuthentication
 import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    @IBAction func loginButton(_ sender: UIButton) {
+        if emailText.text! != "" && passwordText.text != ""{
+            Firebase.Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!, completion: { (user, error) in
+                if user != nil{
+                    //login successful
+                    self.performSegue(withIdentifier: "segue", sender: self )
+                } else {
+                    if let myError = error?.localizedDescription{
+                        print(myError)
+                    } else {
+                        print("Error")
+                    }
+                }
+            })
+        }
+    }
     @IBOutlet weak var visualEffectLogin: UIVisualEffectView!
     var effect:UIVisualEffect!
     @IBOutlet var loginView: UIView!
@@ -62,5 +80,7 @@ class ViewController: UIViewController {
     }
 
 
+    
+    
 }
 
