@@ -1,0 +1,23 @@
+{
+  "name": "iic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbommena/IIC_ios_android.git"
+  },
+  "author": "Utkarsh Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbommena/IIC_ios_android/issues"
+  },
+  "homepage": "https://github.com/vbommena/IIC_ios_android#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "express": "^4.16.3"
+  }
+}
